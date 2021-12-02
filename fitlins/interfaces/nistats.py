@@ -229,8 +229,7 @@ class FirstLevelModel(NistatsBaseInterface, FirstLevelEstimatorInterface, Simple
               spec['contrasts'], mat.columns):
             contrast_metadata.append(
                     {
-                        "name": spec['name'],
-                        "level": spec['level'],
+                        "node": spec['name'],
                         "stat": contrast_test,
                         **cont_ents,
                     }
@@ -355,8 +354,7 @@ class SecondLevelModel(NistatsBaseInterface, SecondLevelEstimatorInterface, Simp
         for name, weights, cont_ents, contrast_test in contrasts:
             contrast_metadata.append(
                     {
-                        "name": spec['name'],
-                        "level": spec['level'],
+                        "node": spec['name'],
                         "stat": contrast_test,
                         **cont_ents,
                     }

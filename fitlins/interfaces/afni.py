@@ -263,8 +263,7 @@ class FirstLevelModel(FirstLevelModel):
         for (name, weights, cont_ents, contrast_test) in contrasts:
             contrast_metadata.append(
                     {
-                        "name": self.inputs.spec['name'],
-                        "level": self.inputs.spec['level'],
+                        "node": self.inputs.spec['name'],
                         "stat": contrast_test,
                         **cont_ents,
                     }
