@@ -154,7 +154,7 @@ def init_fitlins_wf(database_path, out_dir, graph, analysis_level, space,
 
     reportlet_dir = Path(base_dir) / 'reportlets' / 'fitlins'
     reportlet_dir.mkdir(parents=True, exist_ok=True)
-    snippet_pattern = 'node-{node}/[sub-{subject}/][ses-{session}/][sub-{subject}_]' \
+    snippet_pattern = '[sub-{subject}/][ses-{session}/][sub-{subject}_]' \
         '[ses-{session}_][task-{task}_][run-{run}_]snippet.html'
     ds_model_warnings = pe.MapNode(
         BIDSDataSink(base_directory=str(reportlet_dir),
